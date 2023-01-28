@@ -2,7 +2,7 @@ import React from 'react';
 import liff from '@line/liff';
 
 await liff.init({
-  liffId: '1657855491-8GAwNwaX',
+  liffId: '1657855753-Rplgagd0',
 });
 
 if (!liff.isLoggedIn()) {
