@@ -1,6 +1,8 @@
 {
   "extends": "@tsconfig/vite-react",
   "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
     "baseUrl": ".",
     "paths": {
       "~/*": ["src/*"]
