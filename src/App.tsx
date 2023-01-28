@@ -9,6 +9,8 @@ if (!liff.isLoggedIn()) {
   liff.login();
 }
 
+const profile = await liff.getProfile();
+
 export const App: React.FC = () => {
   return (
     <div className="mx-auto max-w-screen-md px-4 py-10">
@@ -23,6 +25,7 @@ export const App: React.FC = () => {
         <button className="btn-outline btn" onClick={() => liff.logout()}>
           Logout
         </button>
+        <pre>{JSON.stringify(profile, null, '  ')}</pre>
       </article>
     </div>
   );
