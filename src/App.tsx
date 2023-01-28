@@ -5,6 +5,10 @@ await liff.init({
   liffId: '1657855491-8GAwNwaX',
 });
 
+if (!liff.isLoggedIn()) {
+  liff.login();
+}
+
 export const App: React.FC = () => {
   return (
     <div className="mx-auto max-w-screen-md px-4 py-10">
@@ -15,6 +19,9 @@ export const App: React.FC = () => {
         <pre>logged in? {liff.isLoggedIn() ? 'yes' : 'no'}</pre>
         <button className="btn" onClick={() => liff.login()}>
           Login
+        </button>
+        <button className="btn-outline btn" onClick={() => liff.logout()}>
+          Logout
         </button>
       </article>
     </div>
